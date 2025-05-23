@@ -1,0 +1,33 @@
+form {
+  max-width: 600px;
+  margin: 1rem auto; /* This centers the form horizontally */
+  padding: 1rem;
+  background-color: #f9f9f9; /* Optional: Add a background */
+  border-radius: 8px;        /* Optional: Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Light shadow */
+}
+
+h2 {
+  text-align: center;
+}
+
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+input[type="text"], textarea {
+  margin-top: 0.3rem;
+}
+
+input[type="checkbox"] {
+  margin-left: 0.5rem;
+  transform: scale(1.2);
+  vertical-align: middle;
+}
+
+button {
+  margin-top: 1rem;
+}

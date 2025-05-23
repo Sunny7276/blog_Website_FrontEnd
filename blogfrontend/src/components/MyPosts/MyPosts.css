@@ -1,0 +1,32 @@
+ul {
+  margin-top: 1rem;
+}
+
+li {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fafafa;
+}
+
+li h3 {
+  color: #007bff;
+}
+
+input[type="text"], textarea {
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type="checkbox"] {
+  margin-left: 0.5rem;
+  transform: scale(1.2);
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+button {
+  margin-right: 0.5rem;
+  margin-top: 0.3rem;
+}

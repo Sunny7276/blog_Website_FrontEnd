@@ -1,36 +1,36 @@
-import {useLocation, useNavigate} from 'react-router-dom'
-import {useAuth} from './auth/AuthContext'
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../auth/AuthContext';
+import './NavBar.css';
 
-export default function NavBar(){
+export default function NavBar() {
+  const { isLoggedIn, logout, user } = useAuth();
+  const navigate = useNavigate();
 
-    const {isLoggedIn,logout} = useAuth();
-    const navigate = useNavigate();
-    const location = useLocation();
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  };
 
-    const handleLogout =() =>{
-        logout();
-        navigate('/');
-    }
-
-    return(
-        <div className="navbar">
-            {/* Home button*/}
-            <button onclick={()=> navigate('/')}>Home</button>
-            
-            {/* If Logged in true the display buttons */}
-            {isLoggedIn &&(
-                <button onclick={()=> navigate('/newposts')}>New Post</button>
-            )&&(
-                <button onclick={()=> navigate('/myposts')}>My Posts</button>
-            )}
-
-            {!isLoggedIn ? (
-                <button onclick={()=> navigate('/login')}>Login</button>
-            ):(
-                <button onclick={handleLogout}>Logout</button>
-            )}
-           
-
-        </div>
-    );
+  return (
+    <div className="navbar">
+      <span className="logo" onClick={() => navigate('/')}>Blog Website</span>
+      <div className="buttons">
+        <button onClick={() => navigate('/')}>Home</button>
+        {isLoggedIn && (
+          <>
+            <button onClick={() => navigate('/newposts')}>New Post</button>
+            <button onClick={() => navigate('/myposts')}>My Posts</button>
+            <span className="user-greeting">Hi, {user.userName}</span>
+            <button onClick={handleLogout}>Logout</button>
+          </>
+        )}
+        {!isLoggedIn && (
+          <>
+            <button onClick={() => navigate('/login')}>Login</button>
+            <button onClick={() => navigate('/signup')}>Sign Up</button>
+          </>
+        )}
+      </div>
+    </div>
+  );
 }

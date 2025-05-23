@@ -1,0 +1,30 @@
+textarea {
+  width: 100%;
+  min-height: 80px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  margin-top: 0.3rem;
+}
+
+h2 {
+  color: #007bff;
+}
+
+hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+ul li {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+ul li small {
+  color: #666;
+}

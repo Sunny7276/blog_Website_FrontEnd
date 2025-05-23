@@ -1,0 +1,15 @@
+/* You can wrap the whole content in a container div with class "container" */
+
+h3 {
+  color: #007bff;
+  margin-bottom: 0.3rem;
+}
+
+ul li {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.6rem;
+}
+
+ul li:hover {
+  background-color: #f1f5f9;
+}
